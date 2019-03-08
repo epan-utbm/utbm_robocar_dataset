@@ -24,19 +24,20 @@
     
     <h2>Description</h2>
     <p>This dataset was collected with our robocar (<b>in human driving mode of course</b>), equipped up to eleven heterogeneous sensors, in the downtown (for long-term data) and a suburb (for roundabout data) of <a href="http://www.montbeliard.fr/">Montb&eacute;liard</a> in France.
-       The vehicle speed was limited to 50 km/h following the French traffic rules.
-       For the long-term data, the driving distance is about 5.0 km (containing a small and a big road loop for loop-closure purpose) and the length of recorded data is about 16 minutes for each collection round.
-       In addition to the typical eastern French city, users can feel the daily and seasonal changes of the city.
-       For a quick overview, please refer to the following video.</p>
+      The vehicle speed was limited to 50 km/h following the French traffic rules.
+      For the long-term data, the driving distance is about 5.0 km (containing a small and a big road loop for loop-closure purpose) and the length of recorded data is about 16 minutes for each collection round.
+      In addition to the typical eastern French city, users can feel the daily and seasonal changes of the city.
+      For a quick overview, please refer to the following video.</p>
     <div style="text-align: left"><iframe width="560" height="315" src="https://www.youtube.com/embed/d8TNc3vVMLA" frameborder="0" allowfullscreen></iframe></div>
     <p>For the roundabout data, the driving distance is about 5.9 km (containing 10 roundabouts with various sizes) and the length of recorded data is about 14 minutes.</p>
     
     <h2>Contributions</h2>
     <p>This dataset provides:</p>
     <ol>
-      <li><a href="http://wiki.ros.org/">Robot Operating System (ROS)</a> <i>rosbag</i> files recording <b>ground truth</b> from Two Velodyne HDL-32E 3D lidars, an ibeo LUX 4L 3D lidar, a SICK LMS100-10000 2D lidar, two Bumblebee stereo cameras, Two Pixelink PL-B742F cameras with fisheye lens, A Magellan ProFlex 500 GNSS receiver with RTK correction, and an Xsens MTi-28A53G25 IMU;
-      <li>one week of data, the same route, recorded once a day. Since it captures daily changes, our dataset is especially suitable for long-term autonomy research;
-      <li> baselines based on relevant state-of-the-art methods, for the monocular, stereo, lidar odometry and visual localization challenges.
+      <li><a href="http://wiki.ros.org/">Robot Operating System (ROS)</a> <i>rosbag</i> files recording <b>ground truth</b> from two stereo cameras (a Bumblebee XB3 and a Bumblebee2), two Velodyne HDL-32E lidars, two Pixelink PL-B742F cameras with fisheye lens, an ibeo LUX 4L lidar, a Continental ARS 308 radar, a SICK LMS100-10000 laser rangefinder, a Magellan ProFlex 500 GNSS receiver with an RTK base station, and an Xsens MTi-28A53G25 IMU;
+      <li>Data covering day, night, week, and season. As it captures daily and seasonal changes, this dataset is especially suitable for long-term autonomy research;
+      <li>Intensive data for roundabout challenge, a very common road condition in France as well as in other European countries, not easy to handle even for humans.
+      <li>Baselines based on relevant state-of-the-art methods, for the visual (monocular and stereo) and lidar odometry benchmarking (with ground-truth trajectories recorded by GPS/RTK).
     </ol>
     
     <h2>Citation</h2>
@@ -45,30 +46,32 @@
     
     <h2>Recording platform</h2>
     <p style="text-align: left">
-      <img alt="sensors.png" height="315" src="images/sensors.png">
+      <img alt="sensors.png" height="315" src="images/sensors.png">&nbsp;&nbsp;&nbsp;
+      <img alt="sensors.png" height="315" src="images/ros_graph.jpg">
     </p>
     <p>
-      Our design mainly adheres to the following two principles: 1) strengthen the visual scope as much as possible, and 2) maximize the overlapping area perceived by multiple sensors. In particular,
+      Our design mainly adheres to the following two principles: 1) strengthen the visual scope as much as possible, and 2) maximize the overlapping area perceived by multiple sensors. In particular:
       <ul>
-	<li>two stereo cameras, i.e. a front-facing Bumblebee XB3 and a back-facing Bumblebee2, are mounted on the front and rear of the roof, respectively;</li>
-	<li>two Velodyne HDL-32E 3D lidars are mounted on the front portion of the vehicle roof, side by side;</li>
-	<li>two Pixelink PL-B742F cameras with the fisheye lens are installed in the middle of the roof, facing the lateral sides of the car;</li>
-	<li>an ibeo LUX 4L 3D lidar is embedded into the front bumper close to the y-axis of the car;</li>
-	<li>a Continental ARS 308 radar is mounted in a position close to the ibeo LUX lidar;</li>
-	<li>a SICK LMS100-10000 2D lidar facing the road is mounted on one side of the front bumper;</li>
-	<li>a Magellan ProFlex 500 GNSS receiver is placed in the car with two antennas on the roof;</li>
-        <li>an Xsens MTi-28A53G25 IMU is placed inside the vehicle.</li>
+	<li>Two stereo cameras, i.e. a front-facing Bumblebee XB3 and a back-facing Bumblebee2, are mounted on the front and rear of the roof, respectively.</li>
+	<li>Two Velodyne HDL-32E lidars are mounted on the front portion of the vehicle roof, side by side.</li>
+	<li>Two Pixelink PL-B742F cameras with fisheye lens are installed in the middle of the roof, facing the lateral sides of the vehicle.</li>
+	<li>An ibeo LUX 4L lidar is embedded into the front bumper close to the y-axis of the car.</li>
+	<li>A Continental ARS 308 radar is mounted in a position close to the ibeo LUX lidar.</li>
+	<li>A SICK LMS100-10000 laser rangefinder (i.e. 2D lidar) facing the road is mounted on one side of the front bumper.</li>
+	<li>A Magellan ProFlex 500 GNSS receiver is placed in the car with two antennas on the roof.</li>
+        <li>An Xsens MTi-28A53G25 IMU is also placed inside the vehicle.</li>
       </ul>
+      For more details, please refer to our paper.
     </p>
     
     <h2>Challenges</h2>
-    <p>Many new research challenges have been introduced in this dataset, such as sloping road, shared zone, diversion, roundabout, etc.</p>
+    <p>Many new research challenges have been introduced in this dataset, such as:</p>
     <table style="border-spacing: 20px; text-align: center;">
       <tr>
-	<td><img alt="sloping_road.jpg" height="168" src="images/sloping_road.jpg"></td>
-	<td><img alt="shared_zone.jpg" height="168" src="images/shared_zone.jpg"></td>
-	<td><img alt="diversion.jpg" height="168" src="images/diversion.jpg"></td>
-	<td><img alt="roundabout.jpg" height="168" src="images/roundabout.jpg"></td>
+	<td><img alt="sloping_road.jpg" height="168" src=""></td>
+	<td><img alt="shared_zone.jpg" height="168" src=""></td>
+	<td><img alt="diversion.jpg" height="168" src=""></td>
+	<td><img alt="roundabout.jpg" height="168" src=""></td>
       </tr>
       <tr>
 	<td>sloping road</td>
@@ -79,18 +82,44 @@
     </table>
     
     <h2>Downloads</h2>
-    <table style="border-spacing: 20px; text-align: center;">
-      <tr><th>Date</th> <th>Time</th> <th>Sensor</th> <th>Raw data</th></tr>
-      <tr><td>2018-07-16</td> <td>16:10-16:26</td> <td>all lidars</td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/ZC9lIvVEa61jgIr/download?path=%2F&files=utbm_robocar_dataset_20180716_lidars.bag">rosbag</a></td></tr>
-      <tr><td>2018-07-17</td> <td>15:40-15:56</td> <td>all lidars</td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/ZC9lIvVEa61jgIr/download?path=%2F&files=utbm_robocar_dataset_20180717_lidars.bag">rosbag</a></td></tr>
-      <tr><td>2018-07-18</td> <td>15:04-15:20</td> <td>all lidars</td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/ZC9lIvVEa61jgIr/download?path=%2F&files=utbm_robocar_dataset_20180718_lidars.bag">rosbag</a></td></tr>
-      <tr><td>2018-07-19</td> <td>16:15-16:50</td> <td>all lidars</td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/ZC9lIvVEa61jgIr/download?path=%2F&files=utbm_robocar_dataset_20180719_lidars.bag">rosbag</a></td></tr>
-      <tr><td>2018-07-20</td> <td>16:35-16:51</td> <td>all lidars</td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/ZC9lIvVEa61jgIr/download?path=%2F&files=utbm_robocar_dataset_20180720_lidars.bag">rosbag</a></td></tr>
+    <b>Long-term data:</b>
+    <table style="border-spacing: 20px; text-align: left;">
+      <tr><th>Date</th> <th>Local Time (Paris)</th> <th>Sensors</th> <th>Raw data</th></tr>
+      <tr><td>2018-05-02 (Wed)</td> <td>22:02 - 22:17 (xx min)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="">rosbag</a></td></tr>
+      <tr><td>2018-05-04 (Fri)</td> <td>22:10 - 22:24 (xx min)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="">rosbag</a></td></tr>
+      <tr><td>2018-07-13 (Fri)</td> <td>16:10 - 16:26 (xx min)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="">rosbag</a></td></tr>
+      <tr><td>2018-07-16 (Mon)</td> <td>16:10 - 16:26 (xx min)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="">rosbag</a></td></tr>
+      <tr><td>2018-07-17 (Tue)</td> <td>15:40 - 15:56 (xx min)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="">rosbag</a></td></tr>
+      <tr><td>2018-07-18 (Wed)</td> <td>15:04 - 15:20 (xx min)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="">rosbag</a></td></tr>
+      <tr><td>2018-07-19 (Thu)</td> <td>16:35 - 16:50 (xx min)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="">rosbag</a></td></tr>
+      <tr><td>2018-07-20 (Fri)</td> <td>16:35 - 16:51 (xx min)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="">rosbag</a></td></tr>
+      <tr><td>2019-01-10 (Fri)</td> <td>09:06 - 09:16 (xx min)</td> <td>1 &times; Velodyne / ibeo / SICK / IMU</td> <td><a href="">rosbag</a><sup>*</sup></td></tr>
+      <tr><td>2019-01-31 (Fri)</td> <td>08:54 - 09:10 (xx min)</td> <td>1 &times; Velodyne / ibeo / SICK / IMU</td> <td><a href="">rosbag</a><sup>*</sup></td></tr>
+      <tr><td colspan="4"><sup>*</sup><i>Due to adverse weather conditions, we only recorded part of the itinerary.</i></td></tr>
     </table>
-	  
-    <p><i>Please note that, 1) it is a growing dataset and will be incrementally published,
-	                    2) images will be available after processing to meet the GDPR requirements.</i></p>
-	
+    
+    <b>Roundabout data:</b>
+    <table style="border-spacing: 20px; text-align: left;">
+      <tr><th>Date</th> <th>Local Time (Paris)</th> <th>Sensors</th> <th>Raw data</th></tr>
+      <tr><td>2019-03-08 (Fri)</td> <td>14:27 - 14:42 (xx min)</td> <td>1 &times; Velodyne / ibeo / SICK / radar / IMU / GPS-RTK</td> <td><a href="">rosbag</a></td></tr>
+    </table>
+    
+    <p><i>Please note that, 1) it is a growing dataset and will be incrementally published, and 2) images will be available after processing to meet the GDPR requirements.</i></p>
+    
+    <h2>How to play</h2>
+    <table>
+      <tr><td bgcolor="#DCDCDC">roslaunch <a href="">utbm_dataset_play.launch</a> bag:=path_to_your_rosbag</td></tr>
+    </table>
+    <p>
+      By using the provided launch file, you will have:
+      <ol>
+	<li> Point cloud conversions for the Velodyne lidars.
+	<li> A function to remove any spurious data due to blockage or reflections from the opposing Velodyne lidars.
+	<li> The output of the object tracking functionality of the ibeo LUX lidar.
+	<li> A complete and aligned tf tree.
+      </ol>
+      <i>Please note that this part will only be released after our paper has been accepted.</i></p>
+    
     <h2>Baselines</h2>
     <p><a href="https://github.com/epan-utbm/utbm_robocar_dataset">https://github.com/epan-utbm/utbm_robocar_dataset</a></p>
     
@@ -98,7 +127,7 @@
     <p>
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
       <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-      <br />Copyright (c) 2018 <a href="https://yzrobot.github.io/">Zhi Yan</a>, <a href="https://sites.google.com/site/lisunspersonalsite/">Li Sun</a>, and <a href="https://www.researchgate.net/profile/Yassine_Ruichek">Yassine Ruichek</a>.
+      <br />Copyright (c) 2018 <a href="https://yzrobot.github.io/">Zhi Yan</a>, <a href="https://sites.google.com/site/lisunspersonalsite/">Li Sun</a>, <a href="http://labe.felk.cvut.cz/~tkrajnik/">Tomas Krajnik</a>, and <a href="https://www.researchgate.net/profile/Yassine_Ruichek">Yassine Ruichek</a>.
     </p>
     
     <h2>Funding</h2>
