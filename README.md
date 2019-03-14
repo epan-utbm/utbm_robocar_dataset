@@ -15,10 +15,16 @@ All users are more than welcome to commit their results.
 
 *Ground-truth trajectories recorded by GPS/RTK*
 
+### How to play
+
+```shell
+roslaunch [loam_velodyne.launch](loam_velodyne/launch/loam_velodyne.launch) bag:=path_to_your_rosbag
+```
+
+### Evaluation
+
+First of all, you should have something like this:
+
+![loam_rosgraph.png](images/loam_rosgraph.png)
+
 Single Velodyne HDL-32E (left)
-
-Single Velodyne HDL-32E (left) + IMU
-
-Two Velodyne HDL-32E
-
-
