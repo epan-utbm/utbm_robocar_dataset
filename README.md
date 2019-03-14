@@ -10,3 +10,15 @@ We forked the implementation of the following state-of-the-art methods and exper
 * Visual odometry: https://github.com/raulmur/ORB_SLAM2
 
 All users are more than welcome to commit their results.
+
+## Lidar odometry
+
+*Ground-truth trajectories recorded by GPS/RTK*
+
+Single Velodyne HDL-32E (left)
+
+Single Velodyne HDL-32E (left) + IMU
+
+Two Velodyne HDL-32E
+
+
