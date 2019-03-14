@@ -18,10 +18,10 @@ All users are more than welcome to commit their results.
 ### How to play
 
 ```shell
-roslaunch loam_velodyne.launch bag:=path_to_your_rosbag
+roslaunch loam_velodyne_utbm.launch bag:=path_to_your_rosbag
 ```
 
-```loam_velodyne.launch``` is [here](loam_velodyne/launch/loam_velodyne.launch).
+```loam_velodyne_utbm.launch``` is [here](loam_velodyne/launch/loam_velodyne_utbm.launch).
 
 ### Evaluation
 
