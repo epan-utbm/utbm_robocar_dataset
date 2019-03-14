@@ -17,7 +17,7 @@ All users are more than welcome to commit their results.
 
 ### How to play
 
-```bash
+```shell
 roslaunch loam_velodyne.launch bag:=path_to_your_rosbag
 ```
 
