@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
   <head>
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -45,27 +46,35 @@
     
     <h2>Citation</h2>
     <p>If you publish work based on, or using, this dataset, we would appreciate citations to the following:</p>
-    <p><font color="red">manuscript under review ...</font></p>
+
+    <em>
+      @misc{utbm_dataset,<br>
+      &nbsp;&nbsp;&nbsp; author = {Zhi Yan and Li Sun and Tomas Krajnik and Yassine Ruichek},<br>
+      &nbsp;&nbsp;&nbsp; title = {{UTBM} Multisensor {ROS}-based Dataset for Autonomous Driving},<br>
+      &nbsp;&nbsp;&nbsp; howpublished = {\url{https://epan-utbm.github.io/utbm_robocar_dataset/}},<br>
+      &nbsp;&nbsp;&nbsp; note = {Accessed: xxxx-xx-xx}<br>
+      }
+    </em>
     
     <h2>Recording platform</h2>
     <p style="text-align: left">
       <img alt="sensors.png" height="315" src="images/sensors.png">&nbsp;&nbsp;&nbsp;
       <img alt="sensors.png" height="315" src="images/ros_graph.jpg">
     </p>
-    <p>
-      Our design mainly adheres to the following two principles: 1) strengthen the visual scope as much as possible, and 2) maximize the overlapping area perceived by multiple sensors. In particular:
-      <ul>
-	<li>Two stereo cameras, i.e. a front-facing Bumblebee XB3 and a back-facing Bumblebee2, are mounted on the front and rear of the roof, respectively.</li>
-	<li>Two Velodyne HDL-32E lidars are mounted on the front portion of the vehicle roof, side by side.</li>
-	<li>Two Pixelink PL-B742F cameras with fisheye lens are installed in the middle of the roof, facing the lateral sides of the vehicle.</li>
-	<li>An ibeo LUX 4L lidar is embedded into the front bumper close to the y-axis of the car.</li>
-	<li>A Continental ARS 308 radar is mounted in a position close to the ibeo LUX lidar.</li>
-	<li>A SICK LMS100-10000 laser rangefinder (i.e. 2D lidar) facing the road is mounted on one side of the front bumper.</li>
-	<li>A Magellan ProFlex 500 GNSS receiver is placed in the car with two antennas on the roof.</li>
-        <li>An Xsens MTi-28A53G25 IMU is also placed inside the vehicle.</li>
-      </ul>
-      For more details, please refer to our paper.
-    </p>
+
+    <p>Our design mainly adheres to the following two principles: 1) strengthen the visual scope as much as possible, and 2) maximize the overlapping area perceived by multiple sensors. In particular:</p>
+    <ul>
+      <li>Two stereo cameras, i.e. a front-facing Bumblebee XB3 and a back-facing Bumblebee2, are mounted on the front and rear of the roof, respectively.</li>
+      <li>Two Velodyne HDL-32E lidars are mounted on the front portion of the vehicle roof, side by side.</li>
+      <li>Two Pixelink PL-B742F cameras with fisheye lens are installed in the middle of the roof, facing the lateral sides of the vehicle.</li>
+      <li>An ibeo LUX 4L lidar is embedded into the front bumper close to the y-axis of the car.</li>
+      <li>A Continental ARS 308 radar is mounted in a position close to the ibeo LUX lidar.</li>
+      <li>A SICK LMS100-10000 laser rangefinder (i.e. 2D lidar) facing the road is mounted on one side of the front bumper.</li>
+      <li>A Magellan ProFlex 500 GNSS receiver is placed in the car with two antennas on the roof.</li>
+      <li>An Xsens MTi-28A53G25 IMU is also placed inside the vehicle.</li>
+    </ul>
+    <p>For more details, please refer to our paper (in submission).</p>
+    
     
     <h2>Challenges</h2>
     <p>Many new research challenges have been introduced in this dataset, such as:</p>
@@ -98,16 +107,16 @@
     <b>Long-term data:</b>
     <table style="border-spacing: 20px; text-align: left;">
       <tr><th>Date</th> <th>Local Time (Paris)</th> <th>Sensors</th> <th>Raw data</th></tr>
-      <tr><td>2018-05-02 (Wed)</td> <td>20:40 - 20:54 (14m30s)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="">rosbag</a></td></tr>
-      <tr><td>2018-05-02 (Wed)</td> <td>21:28 - 21:42 (13m55s)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="">rosbag</a></td></tr>
-      <tr><td>2018-07-13 (Fri)</td> <td>14:16 - 14:33 (16m59s)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="">rosbag</a></td></tr>
-      <tr><td>2018-07-16 (Mon)</td> <td>16:10 - 16:26 (15m59s)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="">rosbag</a></td></tr>
-      <tr><td>2018-07-17 (Tue)</td> <td>15:40 - 15:56 (15m59s)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="">rosbag</a></td></tr>
-      <tr><td>2018-07-18 (Wed)</td> <td>15:04 - 15:21 (16m39s)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="">rosbag</a><sup>+</sup></td></tr>
-      <tr><td>2018-07-19 (Thu)</td> <td>16:15 - 16:31 (15m26s)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="">rosbag</a><sup>-</sup></td></tr>
-      <tr><td>2018-07-20 (Fri)</td> <td>14:35 - 14:51 (16m45s)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="">rosbag</a></td></tr>
-      <tr><td>2019-01-10 (Fri)</td> <td>09:06 - 09:17 (10m59s)</td> <td>1 &times; Velodyne / ibeo / SICK / IMU</td> <td><a href="">rosbag</a><sup>*</sup></td></tr>
-      <tr><td>2019-01-31 (Fri)</td> <td>08:54 - 09:10 (15m59s)</td> <td>1 &times; Velodyne / ibeo / SICK / IMU / GPS</td> <td><a href="">rosbag</a><sup>*</sup></td></tr>
+      <tr><td>2018-05-02 (Wed)</td> <td>20:40 - 20:54 (14m30s)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/ZVjsgtnTYNJDTJN">rosbag</a></td></tr>
+      <tr><td>2018-05-02 (Wed)</td> <td>21:28 - 21:42 (13m55s)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/G0aYdveU3rQwceh">rosbag</a></td></tr>
+      <tr><td>2018-07-13 (Fri)</td> <td>14:16 - 14:33 (16m59s)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/kAYErMEk1GNH4vq">rosbag</a></td></tr>
+      <tr><td>2018-07-16 (Mon)</td> <td>16:10 - 16:26 (15m59s)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/kAYErMEk1GNH4vq">rosbag</a></td></tr>
+      <tr><td>2018-07-17 (Tue)</td> <td>15:40 - 15:56 (15m59s)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/kAYErMEk1GNH4vq">rosbag</a></td></tr>
+      <tr><td>2018-07-18 (Wed)</td> <td>15:04 - 15:21 (16m39s)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/kAYErMEk1GNH4vq">rosbag</a><sup>+</sup></td></tr>
+      <tr><td>2018-07-19 (Thu)</td> <td>16:15 - 16:31 (15m26s)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/kAYErMEk1GNH4vq">rosbag</a><sup>-</sup></td></tr>
+      <tr><td>2018-07-20 (Fri)</td> <td>14:35 - 14:51 (16m45s)</td> <td>2 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK</td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/kAYErMEk1GNH4vq">rosbag</a></td></tr>
+      <tr><td>2019-01-10 (Fri)</td> <td>09:06 - 09:17 (10m59s)</td> <td>1 &times; Velodyne / ibeo / SICK / IMU</td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/kAYErMEk1GNH4vq">rosbag</a><sup>*</sup></td></tr>
+      <tr><td>2019-01-31 (Fri)</td> <td>08:54 - 09:10 (15m59s)</td> <td>1 &times; Velodyne / ibeo / SICK / IMU / GPS</td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/kAYErMEk1GNH4vq">rosbag</a><sup>*</sup></td></tr>
       <tr><td colspan="4"><sup>+</sup><i>Only partial GPS-RTK data.</i></td></tr>
       <tr><td colspan="4"><sup>-</sup><i>Best data quality, recommended for evaluation.</i></td></tr>
       <tr><td colspan="4"><sup>*</sup><i>Due to adverse weather conditions, we only recorded part of the itinerary.</i></td></tr>
@@ -125,14 +134,13 @@
     <table>
       <tr><td bgcolor="#DCDCDC">roslaunch <a href="">utbm_dataset_play.launch</a> bag:=path_to_your_rosbag</td></tr>
     </table>
-    <p>
-      By using the provided launch file, you will have:
-      <ol>
-	<li> Point cloud conversions for the Velodyne lidars, and without any spurious data (caused by blockage or reflections from the opposing sensors).
-	<li> The output of the object tracking functionality of the ibeo LUX lidar.
-	<li> A complete and aligned tf tree.
-      </ol>
-      <i>Please note that this part will only be released after our paper has been accepted.</i></p>
+    <p>By using the provided launch file, you will have:</p>
+    <ol>
+      <li> Point cloud conversions for the Velodyne lidars, and without any spurious data (caused by blockage or reflections from the opposing sensors).
+      <li> The output of the object tracking functionality of the ibeo LUX lidar.
+      <li> A complete and aligned tf tree.
+    </ol>
+    <i>Please note that this part will only be released after our paper has been accepted.</i>
     
     <h2>Baselines</h2>
     <p><a href="https://github.com/epan-utbm/utbm_robocar_dataset">https://github.com/epan-utbm/utbm_robocar_dataset</a></p>
@@ -146,12 +154,12 @@
     
     <h2>Funding</h2>
     <p>This work was supported by the Quality Research Bonus (BQR) of the University of Technology of Belfort-Montb&eacute;liard (UTBM), the Contrat de Plan &Eacute;tat-R&eacute;gion (CPER) 2015-2020 Mobilitech, and the PHC Barrande programme under grant agreement No. 40682ZH (3L4AV).</p>
-  </body>
 
     <h2>Sponsors</h2>
     <a href="https://lcas.lincoln.ac.uk/wp/"><img alt="lcas_logo.png" src="images/lcas_logo.png"/></a>
-  </body>
-	
+
     <h2>Acknowledgment</h2>
     <p>The authors would like to thank <a href="http://www.multiagent.fr/People:Abbas-turki_abdeljalil">Abdeljalil Abbas-Turki</a>, <a href="http://www.multiagent.fr/People:Lamotte_olivier">Olivier Lamotte</a>, <a href="https://www.researchgate.net/profile/Jocelyn_Buisson">Jocelyn Buisson</a>, and <a href="https://www.researchgate.net/profile/Fahad_Lateef">Fahad Lateef</a> for their help in building the dataset, and the <a href="https://lcas.lincoln.ac.uk/wp/">Lincoln Centre for Autonomous Systems (L-CAS)</a> for hosting the dataset.</p>
+
+  </body>
 </html>
