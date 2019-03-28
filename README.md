@@ -32,3 +32,7 @@ First of all, you should have something like this:
 Then, ```/aft_mapped_to_init```([nav_msgs/Odometry](http://docs.ros.org/melodic/api/nav_msgs/html/msg/Odometry.html)) is the output lidar odometry that needs to be evaluated.
 
 Single Velodyne HDL-32E (left)
+
+![loam.png](baselines/loam.png)
+
+
