@@ -14,7 +14,7 @@ All users are more than welcome to commit their results.
 
 *Ground-truth trajectories recorded by GPS/RTK*
 
-## loam_velodyne
+## loam_velodyne (lidar odometry)
 
 ### How to play
 
