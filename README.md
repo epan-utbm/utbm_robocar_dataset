@@ -7,6 +7,7 @@
 We forked the implementation of the following state-of-the-art methods and experimented (with minor changes) with our dataset:
 
 * Lidar odometry: https://github.com/laboshinl/loam_velodyne
+* Lidar odometry: https://github.com/RobustFieldAutonomyLab/LeGO-LOAM
 * Visual odometry: https://github.com/raulmur/ORB_SLAM2
 
 All users are more than welcome to commit their results.
