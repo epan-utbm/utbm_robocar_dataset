@@ -12,9 +12,9 @@ We forked the implementation of the following state-of-the-art methods and exper
 
 All users are more than welcome to commit their results.
 
-## Lidar odometry
-
 *Ground-truth trajectories recorded by GPS/RTK*
+
+## loam_velodyne
 
 ### How to play
 
