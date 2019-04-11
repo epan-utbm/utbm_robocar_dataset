@@ -18,9 +18,9 @@ All users are more than welcome to commit their results.
 
 ## loam_velodyne (lidar odometry)
 
-### How to play
-
 ![loam_map.png](images/loam_map.png)
+
+### How to play
 
 ```shell
 roslaunch loam_velodyne loam_velodyne_utbm.launch bag:=path_to_your_rosbag
