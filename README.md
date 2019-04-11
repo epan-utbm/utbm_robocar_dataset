@@ -1,5 +1,7 @@
 # UTBM Multisensor ROS-based Dataset for Autonomous Driving
 
+[Zhi Yan](https://yzrobot.github.io/), [Li Sun](https://sites.google.com/site/lisunspersonalsite/), [Tomas Krajnik](http://labe.felk.cvut.cz/~tkrajnik/), and [Yassine Ruichek](https://www.researchgate.net/profile/Yassine_Ruichek)
+
 ## Baselines
 
 <img src="images/utbm_logo.png" align="right" /> [![Build Status](https://travis-ci.org/epan-utbm/utbm_robocar_dataset.svg?branch=baselines)](https://travis-ci.org/epan-utbm/utbm_robocar_dataset)
@@ -35,5 +37,29 @@ Then, ```/aft_mapped_to_init```([nav_msgs/Odometry](http://docs.ros.org/melodic/
 Single Velodyne HDL-32E (left)
 
 ![loam.png](baselines/loam.png)
+
+## LeGO-LOAM (lidar odometry)
+
+![lego_map.png](images/lego_map.png)
+
+### How to play
+
+```shell
+roslaunch lego_loam lego_loam_utbm.launch bag:=path_to_your_rosbag
+```
+
+```lego_loam_utbm.launch``` is [here](LeGO-LOAM/LeGO-LOAM/launch/lego_loam_utbm.launch).
+
+### Evaluation
+
+First of all, you should have something like this:
+
+![lego_rosgraph.png](images/lego_rosgraph.png)
+
+Then, ```/aft_mapped_to_init```([nav_msgs/Odometry](http://docs.ros.org/melodic/api/nav_msgs/html/msg/Odometry.html)) is the output lidar odometry that needs to be evaluated.
+
+Single Velodyne HDL-32E (left)
+
+![lego.png](baselines/lego.png)
 
 
