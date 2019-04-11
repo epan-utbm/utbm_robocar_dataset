@@ -20,6 +20,8 @@ All users are more than welcome to commit their results.
 
 ### How to play
 
+![loam_map.png](images/loam_map.png)
+
 ```shell
 roslaunch loam_velodyne loam_velodyne_utbm.launch bag:=path_to_your_rosbag
 ```
