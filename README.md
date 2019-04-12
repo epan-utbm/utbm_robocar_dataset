@@ -4,6 +4,10 @@
 
 [![Build Status](https://travis-ci.org/epan-utbm/utbm_robocar_dataset.svg?branch=baselines)](https://travis-ci.org/epan-utbm/utbm_robocar_dataset)
 
+## Dataset
+
+[https://epan-utbm.github.io/utbm_robocar_dataset/](https://epan-utbm.github.io/utbm_robocar_dataset/)
+
 ## Baselines
 
 We forked the implementation of the following state-of-the-art methods and experimented (with minor changes) with our dataset:
