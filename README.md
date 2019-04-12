@@ -42,7 +42,7 @@ Then, ```/aft_mapped_to_init```([nav_msgs/Odometry](http://docs.ros.org/melodic/
 
 Single Velodyne HDL-32E (left)
 
-![loam.png](baselines/loam.png)
+![loam.png](baselines/loam_velodyne/loam_velodyne_20180719.png)
 
 ## LeGO-LOAM (lidar odometry)
 
