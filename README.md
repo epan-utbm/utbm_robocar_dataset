@@ -67,5 +67,6 @@ Then, ```/aft_mapped_to_init```([nav_msgs/Odometry](http://docs.ros.org/melodic/
 Single Velodyne HDL-32E (left)
 
 ![lego.png](baselines/lego_loam/lego_loam_20180719.png)
+![lego.png](baselines/lego_loam/lego_loam_loop_closure_20180719.png)
 
 
