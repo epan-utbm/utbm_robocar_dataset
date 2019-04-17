@@ -1,4 +1,4 @@
-# UTBM Multisensor ROS-based Dataset for Autonomous Driving
+# EU Long-term Dataset with Multiple Sensors for Autonomous Driving 
 
 <img src="images/utbm_logo.png" align="right" /><img src="images/epan_logo.png" align="right" />[Zhi Yan](https://yzrobot.github.io/), [Li Sun](https://sites.google.com/site/lisunspersonalsite/), [Tomas Krajnik](http://labe.felk.cvut.cz/~tkrajnik/), and [Yassine Ruichek](https://www.researchgate.net/profile/Yassine_Ruichek)
 
