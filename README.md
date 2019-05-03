@@ -30,7 +30,7 @@ All users are more than welcome to commit their results.
 roslaunch loam_velodyne loam_velodyne_utbm.launch bag:=path_to_your_rosbag
 ```
 
-```loam_velodyne_utbm.launch``` is [here](loam_velodyne/launch/loam_velodyne_utbm.launch).
+```loam_velodyne_utbm.launch``` is [here](baselines/loam_velodyne/launch/loam_velodyne_utbm.launch).
 
 ### Evaluation
 
@@ -42,7 +42,7 @@ Then, ```/aft_mapped_to_init```([nav_msgs/Odometry](http://docs.ros.org/melodic/
 
 Single Velodyne HDL-32E (left)
 
-![loam_velodyne_20180719.png](baselines/loam_velodyne/loam_velodyne_20180719.png)
+![loam_velodyne_20180719.png](baselines/results/loam_velodyne/loam_velodyne_20180719.png)
 
 ## LeGO-LOAM (lidar odometry)
 
@@ -54,7 +54,7 @@ Single Velodyne HDL-32E (left)
 roslaunch lego_loam lego_loam_utbm.launch bag:=path_to_your_rosbag
 ```
 
-```lego_loam_utbm.launch``` is [here](LeGO-LOAM/LeGO-LOAM/launch/lego_loam_utbm.launch).
+```lego_loam_utbm.launch``` is [here](baselines/LeGO-LOAM/LeGO-LOAM/launch/lego_loam_utbm.launch).
 
 ### Evaluation
 
@@ -66,7 +66,7 @@ Then, ```/aft_mapped_to_init```([nav_msgs/Odometry](http://docs.ros.org/melodic/
 
 Single Velodyne HDL-32E (left)
 
-![lego_loam_20180719.png](baselines/lego_loam/lego_loam_20180719.png)
-![lego_loam_loop_closure_20180719.png](baselines/lego_loam/lego_loam_loop_closure_20180719.png)
+![lego_loam_20180719.png](baselines/results/lego_loam/lego_loam_20180719.png)
+![lego_loam_loop_closure_20180719.png](baselines/results/lego_loam/lego_loam_loop_closure_20180719.png)
 
 
