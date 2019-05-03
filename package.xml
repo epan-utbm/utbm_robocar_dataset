@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<package>
+  <name>utbm_robocar_dataset</name>
+  <version>0.0.1</version>
+  <description>EU Long-term Dataset with Multiple Sensors for Autonomous Driving</description>
+  <maintainer email="zhi.yan@utbm.fr">Zhi Yan</maintainer>
+  <license>BSD</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+</package>

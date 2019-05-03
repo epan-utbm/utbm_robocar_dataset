@@ -1,0 +1,61 @@
+<launch>
+
+  <!-- rosbag play -->
+  <arg name="bag"/>
+  <param name="use_sim_time" value="true"/>
+  <node pkg="rosbag" type="play" name="rosbag_play" args="-r 1.0 --clock $(arg bag)" required="true"/>
+   
+  <!-- Velodyne HDL-32E: left -->
+  <group ns="hdl32e_left">
+    <node pkg="nodelet" type="nodelet" name="velodyne_left_nodelet_manager" args="manager" output="screen"/>
+    <node pkg="nodelet" type="nodelet" name="cloud_nodelet" args="load velodyne_pointcloud/CloudNodelet velodyne_left_nodelet_manager" output="screen">
+      <param name="calibration" value="$(find velodyne_pointcloud)/params/32db.yaml"/>
+      <param name="min_range" value="0.4"/>
+      <param name="max_range" value="130.0"/>
+      <param name="view_direction" value="3.1415926"/>
+      <param name="view_width" value="5.4769"/>
+    </node>
+  </group>
+  
+  <!-- Velodyne HDL-32E: right -->
+  <group ns="hdl32e_right">
+    <node pkg="nodelet" type="nodelet" name="velodyne_right_nodelet_manager" args="manager" output="screen"/>
+    <node pkg="nodelet" type="nodelet" name="cloud_nodelet" args="load velodyne_pointcloud/CloudNodelet velodyne_right_nodelet_manager" output="screen">
+      <param name="calibration" value="$(find velodyne_pointcloud)/params/32db.yaml"/>
+      <param name="min_range" value="0.4"/>
+      <param name="max_range" value="130.0"/>
+      <param name="view_direction" value="0.0"/>
+      <param name="view_width" value="5.4769"/>
+    </node>
+  </group>
+  
+  <!-- ibeo LUX -->
+  <node name="sick_ldmrs_object_marker" pkg="sick_ldmrs_tools" type="sick_ldmrs_object_marker" output="screen"/>
+  <node name="sick_ldmrs_all_layer_assembler" pkg="sick_ldmrs_tools" type="sick_ldmrs_all_layer_assembler" output="screen">
+    <param name="fixed_frame" value="ldmrs_mount_link"/>
+  </node>
+  <node name="sick_ldmrs_filter_first" pkg="sick_ldmrs_tools" type="sick_ldmrs_filter_first" output="screen">
+    <remap from="cloud" to="all_layers"/>
+  </node>
+  <node name="sick_ldmrs_make_organized" pkg="sick_ldmrs_tools" type="sick_ldmrs_make_organized" output="screen">
+    <remap from="cloud" to="first"/>
+  </node>
+  <node name="sick_ldmrs_remove_background" pkg="sick_ldmrs_tools" type="sick_ldmrs_remove_background" output="screen">
+    <remap from="cloud" to="organized"/>
+  </node>
+  
+  <!-- Magellan ProFlex 500 GNSS Receiver -->
+  <node pkg="nmea_navsat_driver" type="nmea_topic_driver" name="nmea_topic_driver" output="screen"/>
+  <node pkg="gps_common" type="utm_odometry_node" name="utm_odometry_node"/>
+  <node pkg="magellan_proflex500_driver" type="magellan_proflex500_driver" name="magellan_proflex500_driver"/>
+  
+  <!-- tf -->
+  <node pkg="tf" type="static_transform_publisher" name="velodyne_left" args="-0.5 1.4 1.5 0 0 0 base_link velodyne_left 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="velodyne_right" args="0.5 1.4 1.5 0 0 0 base_link velodyne_right 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="ldmrs" args="0 3.6 0 1.57 0 0 base_link ldmrs 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="laser" args="-0.5 3.78 0 1.68 0 3.14 base_link laser 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="base_imu" args="0 0 0 0 0 0 base_link base_imu 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="navsat" args="0 0 0 0 0 0 base_link navsat 100"/>
+  
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(env PWD)/utbm_robocar_dataset.rviz"/>
+</launch>
