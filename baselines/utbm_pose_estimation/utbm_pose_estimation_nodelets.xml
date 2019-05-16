@@ -1,0 +1,7 @@
+<library path="lib/libutbm_pose_estimation_nodelet">
+  <class name="utbm_pose_estimation/PoseEstimationNodelet" type="hector_pose_estimation::PoseEstimationNodelet" base_class_type="nodelet::Nodelet">
+  <description>
+    This nodelet initializes the pose estimation filter with a generic system model driven by IMU measurements only.
+  </description>
+  </class>
+</library>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="utbm_pose_estimation" type="pose_estimation" name="utbm_pose_estimation">
+    <remap from="raw_imu" to="/imu/data"/>
+    <!-- <remap from="magnetic" to="/imu/mag"/> -->
+  </node>
+  
+  <node pkg="tf" type="static_transform_publisher" name="nav" args="0 0 0 0 0 0 nav navsat 100"/>
+  
+  <node pkg="rviz" type="rviz" name="utbm_pose_estimation_rviz" args="-d $(find utbm_pose_estimation)/rviz_cfg/utbm_pose_estimation.rviz" />
+</launch>

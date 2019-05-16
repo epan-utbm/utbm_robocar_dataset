@@ -1,0 +1,43 @@
+<package>
+  <name>utbm_pose_estimation</name>
+  <version>0.3.0</version>
+  <description>
+    A modified hector_pose_estimation to provide 6DOF for EU Long-term Dataset.
+  </description>
+  <maintainer email="meyer@fsr.tu-darmstadt.de">Johannes Meyer</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">http://ros.org/wiki/hector_pose_estimation</url>
+  <!-- <url type="bugtracker"></url> -->
+
+  <author email="meyer@fsr.tu-darmstadt.de">Johannes Meyer</author>
+
+  <!-- Dependencies which this package needs to build itself. -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- Dependencies needed to compile this package. -->
+  <build_depend>hector_pose_estimation_core</build_depend>
+  <build_depend>nodelet</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>message_filters</build_depend>
+
+  <!-- Dependencies needed after this package is compiled. -->
+  <run_depend>hector_pose_estimation_core</run_depend>
+  <run_depend>nodelet</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>message_filters</run_depend>
+
+  <!-- Dependencies needed only for running tests. -->
+
+  <export>
+    <nodelet plugin="${prefix}/utbm_pose_estimation_nodelets.xml"/>
+  </export>
+
+</package>
