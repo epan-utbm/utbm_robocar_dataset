@@ -21,6 +21,24 @@ All users are more than welcome to commit their results.
 
 *Ground-truth trajectories recorded by GPS/RTK*
 
+## hector_pose_estimation (pose estimation)
+
+![hector_pose.png](images/hector_pose.png)
+
+### How to play
+
+```shell
+roslaunch utbm_pose_estimation.launch bag:=path_to_your_rosbag
+```
+
+```utbm_pose_estimation.launch``` is [here](baselines/baselines/utbm_pose_estimation/launch/utbm_pose_estimation.launch).
+
+### Evaluation
+
+First of all, you should have something like this:
+
+![hector_rosgraph.png](images/hector_rosgraph.png)
+
 ## loam_velodyne (lidar odometry)
 
 ![loam_map.png](images/loam_map.png)
