@@ -1,9 +1,18 @@
 <?xml version="1.0"?>
 <launch>
+  <arg name="bag"/>
+  <param name="use_sim_time" value="true"/>
+  <node pkg="rosbag" type="play" name="rosbag_play" args="-r 1.0 --clock $(arg bag)" required="true"/>
+  
   <node pkg="utbm_pose_estimation" type="pose_estimation" name="utbm_pose_estimation">
     <remap from="raw_imu" to="/imu/data"/>
-    <!-- <remap from="magnetic" to="/imu/mag"/> -->
+    <remap from="magnetic" to="/imu/mag"/>
   </node>
+  
+  <!-- Magellan ProFlex 500 GNSS Receiver -->
+  <node pkg="nmea_navsat_driver" type="nmea_topic_driver" name="nmea_topic_driver" output="screen"/>
+  <node pkg="gps_common" type="utm_odometry_node" name="utm_odometry_node"/>
+  <node pkg="magellan_proflex500_driver" type="magellan_proflex500_driver" name="magellan_proflex500_driver"/>
   
   <node pkg="tf" type="static_transform_publisher" name="nav" args="0 0 0 0 0 0 nav navsat 100"/>
   
