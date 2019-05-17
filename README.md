@@ -31,7 +31,7 @@ All users are more than welcome to commit their results.
 roslaunch utbm_pose_estimation.launch bag:=path_to_your_rosbag
 ```
 
-```utbm_pose_estimation.launch``` is [here](baselines/baselines/utbm_pose_estimation/launch/utbm_pose_estimation.launch).
+```utbm_pose_estimation.launch``` is [here](baselines/utbm_pose_estimation/launch/utbm_pose_estimation.launch).
 
 ### Evaluation
 
