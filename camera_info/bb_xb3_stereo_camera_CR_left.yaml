@@ -1,0 +1,20 @@
+image_width: 1280
+image_height: 960
+camera_name: bb_xb3_stereo_camera_CR_left
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [1023.165714, 0.000000, 617.112634, 0.000000, 1024.426792, 418.105175, 0.000000, 0.000000, 1.000000]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [-0.343133, 0.127911, 0.000861, -0.000249, 0.000000]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [0.999925, -0.000442, 0.012246, 0.000497, 0.999990, -0.004502, -0.012243, 0.004508, 0.999915]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [977.986867, 0.000000, 566.060349, 0.000000, 0.000000, 977.986867, 430.765064, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000]

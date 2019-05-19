@@ -1,0 +1,20 @@
+image_width: 1024
+image_height: 768
+camera_name: bb2_stereo_camera_LR_left
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [831.388771, 0.000000, 511.723127, 0.000000, 833.389062, 392.259008, 0.000000, 0.000000, 1.000000]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [-0.357068, 0.142143, 0.000443, 0.000544, 0.000000]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [0.999987, -0.004223, 0.002855, 0.004223, 0.999991, 0.000233, -0.002856, -0.000221, 0.999996]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [779.863260, 0.000000, 498.655193, 0.000000, 0.000000, 779.863260, 399.019794, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000]
