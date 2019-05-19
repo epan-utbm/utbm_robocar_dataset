@@ -39,6 +39,9 @@ First of all, you should have something like this:
 
 ![hector_rosgraph.png](images/hector_rosgraph.png)
 
+
+Then, ```/fix/pose```([geometry_msgs/PoseStamped](http://docs.ros.org/api/geometry_msgs/html/msg/PoseStamped.html)) is the estimated robot pose (6DOF) based on the GPS data.
+
 ## loam_velodyne (lidar odometry)
 
 ![loam_map.png](images/loam_map.png)
