@@ -15,7 +15,6 @@ We forked the implementation of the following state-of-the-art methods and exper
 * Pose Estimation: https://github.com/tu-darmstadt-ros-pkg/hector_localization
 * Lidar odometry: https://github.com/laboshinl/loam_velodyne
 * Lidar odometry: https://github.com/RobustFieldAutonomyLab/LeGO-LOAM
-* Visual odometry: https://github.com/raulmur/ORB_SLAM2
 
 All users are more than welcome to commit their results.
 
