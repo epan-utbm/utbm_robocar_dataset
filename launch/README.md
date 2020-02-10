@@ -7,4 +7,4 @@
   - `sudo apt-get install ros-melodic-nmea-navsat-driver`
   - `sudo apt-get install ros-melodic-gps-common`
   - https://github.com/epan-utbm/utbm_robocar_dataset/tree/baselines/drivers/magellan_proflex500
-* camera_info: https://github.com/epan-utbm/utbm_robocar_dataset/tree/baselines/camera_info (could put the folder in `$HOME/.ros`)
+* camera_info: https://github.com/epan-utbm/utbm_robocar_dataset/tree/baselines/camera_info (could put the folder into `$HOME/.ros`)
