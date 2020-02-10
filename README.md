@@ -3,6 +3,7 @@
 [Zhi Yan](https://yzrobot.github.io/), [Li Sun](https://sites.google.com/site/lisunspersonalsite/), [Tomas Krajnik](http://labe.felk.cvut.cz/~tkrajnik/), and [Yassine Ruichek](https://www.researchgate.net/profile/Yassine_Ruichek)
 
 [![Build Status](https://travis-ci.org/epan-utbm/utbm_robocar_dataset.svg?branch=baselines)](https://travis-ci.org/epan-utbm/utbm_robocar_dataset)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 ## Dataset
 
