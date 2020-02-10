@@ -44,6 +44,39 @@
     <remap from="cloud" to="organized"/>
   </node>
   
+  <!-- Bumblebee XB3 -->
+  <group ns="BBX3_7140017">
+    <node pkg="bumblebee_xb3" type="bumblebee_xb3_node" name="bumblebee_xb3_node" output="screen"/>
+    <group ns="camera/stereo_camera_LR">
+      <node pkg="stereo_image_proc" type="stereo_image_proc" name="stereo_image_proc" output="screen">
+	<param name="correlation_window_size" value="31"/>
+	<param name="disparity_range" value="128"/>
+	<param name="prefilter_size" value="11"/>
+	<param name="speckle_range" value="5"/>
+	<param name="speckle_size" value="1000"/>
+	<param name="stereo_algorithm" value="0"/>
+	<param name="texture_threshold" value="0"/>
+	<param name="uniqueness_ratio" value="8.0"/>
+      </node>
+    </group>
+  </group>
+  
+  <!-- Bumblebee 2 -->
+  <group ns="BB2_9211442">
+    <node pkg="nodelet" type="nodelet" name="bumblebee_nodelet_manager" args="manager"/>
+    <node pkg="nodelet" type="nodelet" name="image_proc_debayer_left" args="load image_proc/debayer bumblebee_nodelet_manager">
+      <remap from="image_raw" to="left/image_raw"/>
+      <remap from="image_mono" to="left/image_mono"/>
+      <remap from="image_color" to="left/image_color"/>
+    </node>
+    <node pkg="nodelet" type="nodelet" name="image_proc_debayer_right" args="load image_proc/debayer bumblebee_nodelet_manager">
+      <remap from="image_raw" to="right/image_raw"/>
+      <remap from="image_mono" to="right/image_mono"/>
+      <remap from="image_color" to="right/image_color"/>
+    </node>
+    <node pkg="stereo_image_proc" type="stereo_image_proc" name="stereo_image_proc" output="screen"/>
+  </group>
+  
   <!-- Magellan ProFlex 500 GNSS Receiver -->
   <node pkg="nmea_navsat_driver" type="nmea_topic_driver" name="nmea_topic_driver" output="screen"/>
   <node pkg="gps_common" type="utm_odometry_node" name="utm_odometry_node"/>
@@ -55,6 +88,8 @@
   <node pkg="tf" type="static_transform_publisher" name="ldmrs" args="0 3.6 0 1.57 0 0 base_link ldmrs 100"/>
   <node pkg="tf" type="static_transform_publisher" name="laser" args="-0.5 3.78 0 1.68 0 3.14 base_link laser 100"/>
   <node pkg="tf" type="static_transform_publisher" name="base_imu" args="0 0 0 0 0 0 base_link base_imu 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="BBX3_7140017" args="0 1.4 1.5 0 0 -1.57 base_link stereo_camera_LR 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="BB2_9211442" args="0 -0.5 1.3 0 3.14 1.4 base_link BB2_9211442 100"/>
   <node pkg="tf" type="static_transform_publisher" name="navsat" args="0 0 0 0 0 0 base_link navsat 100"/>
   
   <node pkg="rviz" type="rviz" name="rviz" args="-d $(env PWD)/utbm_robocar_dataset.rviz"/>
