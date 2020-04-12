@@ -69,6 +69,8 @@ Single Velodyne HDL-32E (left)
 
 ## LeGO-LOAM (lidar odometry)
 
+1. Minor changes w.r.t. LeGO-LOAM ([Issue #9](https://github.com/epan-utbm/utbm_robocar_dataset/issues/9), thanks to robot54)
+
 ![lego_map.png](images/lego_map.png)
 
 ### How to play
