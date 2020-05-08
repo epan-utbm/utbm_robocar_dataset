@@ -10,7 +10,7 @@
   
   <body>
     <p style="text-align: left"><span style="color:#993300;">COVID-19: </span>Due to the current context, our university is closed from March 14 2020. As a result, we are affected by this measure and cannot, temporarily, no longer update our dataset. We apologize for any inconvenience caused.</p>
-	  
+    
     <h1><span style="color:#003399;">E</span><span style="color:#ffcc00;">U</span> Long-term Dataset with Multiple Sensors for Autonomous Driving</h1>
     
     <p style="text-align: left">--- Collected by our very own UTBM robocar ---</p>
@@ -22,63 +22,62 @@
     </p>
     
     <h2>Description</h2>
-    <p>This dataset was collected with our robocar (<b>in human driving mode of course</b>), equipped up to eleven heterogeneous sensors, in the downtown (for long-term data) and a suburb (for roundabout data) of <a href="http://www.montbeliard.fr/">Montb&eacute;liard</a> in France.
+    <p>This dataset was collected with our robocar (<b>in human driving mode of course</b>), equipped with eleven heterogeneous sensors, in the downtown (for long-term data) and suburban (for roundabout data) areas of <a href="http://www.montbeliard.fr/">Montb&eacute;liard</a> in France.
       The vehicle speed was limited to 50 km/h following the French traffic rules.
       For the long-term data, the driving distance is about 5.0 km (containing a small and a big road loop for loop-closure purpose) and the length of recorded data is about 16 minutes for each collection round.
-      In addition to the typical eastern French city, users can feel the daily and seasonal changes of the city.
-      For a quick overview, please refer to the following video.</p>
+      For the roundabout data, the driving distance is about 4.2 km (containing 10 roundabouts with various sizes) and the length of recorded data is about 12 minutes for each collection round.
+      In addition to enjoying the typical scenery of eastern France, users can also feel the daily and seasonal changes in the city.
+      For a quick overview, please refer to the following videos.</p>
     <div style="text-align: left">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/d8TNc3vVMLA" frameborder="0" allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;
       <iframe width="560" height="315" src="https://www.youtube.com/embed/_xAmXNVMQbM" frameborder="0" allowfullscreen></iframe>
     </div>
-    <p>For the roundabout data, the driving distance is about 4.2 km (containing 10 roundabouts with various sizes) and the length of recorded data is about 12 minutes.</p>
     
     <h2>Contributions</h2>
     <p>This dataset provides:</p>
     <ol>
-      <li><a href="http://wiki.ros.org/">Robot Operating System (ROS)</a> <i>rosbag</i> files recording ground truth from two stereo cameras (a Bumblebee XB3 and a Bumblebee2), two Velodyne HDL-32E lidars, two Pixelink PL-B742F cameras with fisheye lens, an ibeo LUX 4L lidar, a Continental ARS 308 radar, a SICK LMS100-10000 laser rangefinder, a Magellan ProFlex 500 GNSS receiver with an RTK base station, and an Xsens MTi-28A53G25 IMU;
-      <li>Data covering day, night, week, and season. As it captures daily and seasonal changes, this dataset is especially suitable for <b>long-term autonomy</b> research;
-      <li>Intensive data for roundabout challenge, a very common road condition in France as well as in other European countries, not easy to handle even for humans.
-      <li>Baselines based on relevant state-of-the-art methods, for the visual (monocular and stereo) and lidar odometry benchmarking (with ground-truth trajectories recorded by GPS/RTK).
+      <li><a href="http://wiki.ros.org/">Robot Operating System (ROS)</a> <i>rosbag</i> files that record environmental data from two Velodyne HDL-32E lidars, an ibeo LUX 4L lidar, a SICK LMS100-10000 laser rangefinder, a Continental ARS 308 radar, two stereo cameras (a Bumblebee XB3 and a Bumblebee2), two Pixelink PL-B742F cameras with fisheye lens, a Magellan ProFlex 500 GNSS receiver with an RTK base station, and an Xsens MTi-28A53G25 IMU;
+      <li>Data covering day/dusk/night/week/season, ans as it captures daily and seasonal changes, this dataset is especially suitable for <b>long-term autonomy</b> research;
+      <li>Intensive data for roundabout challenge, a very common road condition in France as well as in other European countries, which is not easy to handle even for humans;
+      <li>Baseline methods especially for the lidar odometry, with ground-truth trajectory recorded by GPS-RTK.
     </ol>
     
     <h2>Citation</h2>
     <p>If you publish work based on, or using, this dataset, we would appreciate citations to the following:</p>
     <em>
       @article{utbm_robocar_dataset,<br>
-        &nbsp;&nbsp;&nbsp;author    = {Zhi Yan and
-                     Li Sun and
-                     Tomas Krajnik and
-                     Yassine Ruichek},<br>
-        &nbsp;&nbsp;&nbsp;title     = {<a href="https://arxiv.org/pdf/1909.03330.pdf">{EU} Long-term Dataset with Multiple Sensors for Autonomous Driving</a>},<br>
-        &nbsp;&nbsp;&nbsp;journal   = {CoRR},<br>
-        &nbsp;&nbsp;&nbsp;volume    = {abs/1909.03330},<br>
-        &nbsp;&nbsp;&nbsp;year      = {2019},<br>
-        &nbsp;&nbsp;&nbsp;url       = {http://arxiv.org/abs/1909.03330},<br>
-        &nbsp;&nbsp;&nbsp;archivePrefix = {arXiv},<br>
-        &nbsp;&nbsp;&nbsp;eprint    = {1909.03330}<br>
+      &nbsp;&nbsp;&nbsp;author    = {Zhi Yan and
+      Li Sun and
+      Tomas Krajnik and
+      Yassine Ruichek},<br>
+      &nbsp;&nbsp;&nbsp;title     = {<a href="https://arxiv.org/pdf/1909.03330.pdf">{EU} Long-term Dataset with Multiple Sensors for Autonomous Driving</a>},<br>
+      &nbsp;&nbsp;&nbsp;journal   = {CoRR},<br>
+      &nbsp;&nbsp;&nbsp;volume    = {abs/1909.03330},<br>
+      &nbsp;&nbsp;&nbsp;year      = {2019},<br>
+      &nbsp;&nbsp;&nbsp;url       = {http://arxiv.org/abs/1909.03330},<br>
+      &nbsp;&nbsp;&nbsp;archivePrefix = {arXiv},<br>
+      &nbsp;&nbsp;&nbsp;eprint    = {1909.03330}<br>
       }
     </em>
-
+    
     <h2>Recording platform</h2>
     <p style="text-align: left">
       <img alt="sensors.png" height="315" src="images/sensors.png">&nbsp;&nbsp;&nbsp;
       <img alt="sensors.png" height="315" src="images/ros_graph.jpg">
     </p>
 
-    <p>Our design mainly adheres to the following two principles: 1) strengthen the visual scope as much as possible, and 2) maximize the overlapping area perceived by multiple sensors. In particular:</p>
+    <p>Our multi-sensor platform design mainly follows two principles: 1) strengthen the visual scope as much as possible, and 2) maximize the overlapping area perceived by multiple sensors. In particular:</p>
     <ul>
-      <li>Two stereo cameras, i.e. a front-facing Bumblebee XB3 and a back-facing Bumblebee2, are mounted on the front and rear of the roof, respectively.</li>
+      <li>Two stereo cameras, a front-facing Bumblebee XB3 and a back-facing Bumblebee2, are mounted on the front and rear of the roof, respectively.</li>
       <li>Two Velodyne HDL-32E lidars are mounted on the front portion of the vehicle roof, side by side.</li>
-      <li>Two Pixelink PL-B742F cameras with fisheye lens are installed in the middle of the roof, facing the lateral sides of the vehicle.</li>
+      <li>Two Pixelink PL-B742F industrial cameras with fisheye lens are installed in the middle of the roof, facing the lateral sides of the vehicle.</li>
       <li>An ibeo LUX 4L lidar is embedded into the front bumper close to the y-axis of the car.</li>
       <li>A Continental ARS 308 radar is mounted in a position close to the ibeo LUX lidar.</li>
       <li>A SICK LMS100-10000 laser rangefinder (i.e. 2D lidar) facing the road is mounted on one side of the front bumper.</li>
       <li>A Magellan ProFlex 500 GNSS receiver is placed in the car with two antennas on the roof.</li>
       <li>An Xsens MTi-28A53G25 IMU is also placed inside the vehicle.</li>
     </ul>
-    <p>For more details, please refer to our paper (in submission).</p>
-    
+    <p>For more details, please refer to our paper.</p>
     
     <h2>Challenges</h2>
     <p>Many new research challenges have been introduced in this dataset, such as:</p>
@@ -118,7 +117,7 @@
     <p>
       <i>Please note that all rosbags are <a href="http://wiki.ros.org/rosbag/Commandline#rosbag_compress">compressed</a>, please <a href="http://wiki.ros.org/rosbag/Commandline#rosbag_decompress">decompress</a> them as needed.</i>
       <br />
-      <i>All camera calibration files (intrinsic and extrinsic) are available <a href="https://github.com/epan-utbm/utbm_robocar_dataset/tree/baselines/camera_info">here</a>.</i>
+      <i>Camera calibration files are available <a href="https://github.com/epan-utbm/utbm_robocar_dataset/tree/baselines/camera_info">here</a>.</i>
     </p>
     
     <b>Long-term data:</b>
@@ -135,10 +134,10 @@
       <tr><td>2019-01-10 (Fri, snow)</td> <td>09:06 - 09:17 (10m59s)</td> <td>1 &times; Velodyne / ibeo / SICK / IMU / fisheye</td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/0tEXbkcfhn60bzA">rosbag</a><sup>*</sup></td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/v41ATncAnPACtnf">rosbag</a></td></tr>
       <tr><td>2019-01-31 (Fri， snow)</td> <td>08:54 - 09:10 (15m59s)</td> <td>1 &times; Velodyne / ibeo / SICK / IMU / GPS / fisheye</td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/BYyvLbQpRx17j0p">rosbag</a><sup>*</sup></td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/8QB6VrUz0k8anKz">rosbag</a></td></tr>
       <tr><td>2019-04-18 (Thu， sunny)</td> <td>11:07 - 11:22 (14m55s)</td> <td>1 &times; Velodyne / ibeo / SICK / IMU / GPS-RTK / radar / fisheye</td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/HfWJVQP3RI27lwo">rosbag</a></td> <td><a href="https://lcas.lincoln.ac.uk/owncloud/index.php/s/HsoZvRCZCHqEbNJ">rosbag</a></td></tr>
-      <tr><td colspan="4"><sup>+</sup><i>Only partial GPS-RTK data.</i></td></tr>
-      <tr><td colspan="4"><sup>-</sup><i>Best data quality, recommended for evaluation.</i></td></tr>
-      <tr><td colspan="4"><sup>*</sup><i>Only part of the itinerary recorded due to adverse weather conditions.</i></td></tr>
-      <tr><td colspan="4"><sup>/</sup><i>You might want to <a href="http://wiki.ros.org/bag_tools">add_header_time_offset.py</a></i></td></tr>
+      <tr><td colspan="5"><sup>+</sup><i>Only partial GPS-RTK data.</i></td></tr>
+      <tr><td colspan="5"><sup>-</sup><i>Best data quality, recommended for evaluation.</i></td></tr>
+      <tr><td colspan="5"><sup>*</sup><i>Only part of the itinerary recorded due to adverse weather conditions.</i></td></tr>
+      <tr><td colspan="5"><sup>/</sup><i>You might want to <a href="http://wiki.ros.org/bag_tools">add_header_time_offset.py</a></i></td></tr>
     </table>
     
     <b>Roundabout data:</b>
@@ -177,21 +176,14 @@
     <p>
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
       <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-      <br />Copyright (c) 2018 <a href="https://yzrobot.github.io/">Zhi Yan</a>, <a href="https://sites.google.com/site/lisunspersonalsite/">Li Sun</a>, <a href="http://labe.felk.cvut.cz/~tkrajnik/">Tomas Krajnik</a>, and <a href="https://www.researchgate.net/profile/Yassine_Ruichek">Yassine Ruichek</a>.
+      <br />Copyright (c) 2018-2020 <a href="https://yzrobot.github.io/">Zhi Yan</a>, <a href="https://sites.google.com/site/lisunspersonalsite/">Li Sun</a>, <a href="http://labe.felk.cvut.cz/~tkrajnik/">Tomas Krajnik</a>, and <a href="https://www.researchgate.net/profile/Yassine_Ruichek">Yassine Ruichek</a>.
     </p>
     
     <h2>Funding</h2>
-    <p>This work was supported by the Quality Research Bonus (BQR) of the University of Technology of Belfort-Montb&eacute;liard (UTBM), the Contrat de Plan &Eacute;tat-R&eacute;gion (CPER) 2015-2020 Mobilitech, and the PHC Barrande programme under grant agreement No. 40682ZH (3L4AV).</p>
+    <p>This work was supported by the Quality Research Bonus (BQR) of the University of Technology of Belfort-Montb&eacute;liard (UTBM), the Contrat de Plan &Eacute;tat-R&eacute;gion (CPER) 2015-2020 (Mobilitech), the <a href="https://epan-utbm.github.io/">CZ MSMT project (No. FR-8J18FR018) / PHC Barrande project (No. 40682ZH) (3L4AV)</a>, the OP VVV funded project CZ.02.1.01/0.0/0.0/16\_019/0000765 (Research Center for Informatics), and the NVIDIA GPU grant program.</p>
     
-    <h2>Sponsors</h2>
-    <a href="https://epan-utbm.github.io/"><img alt="epan_logo.png" src="images/epan_logo.png"/></a>&nbsp;&nbsp;&nbsp;
-    <a href="http://www.ciad-lab.fr/"><img alt="ciad_logo.png" src="images/ciad_logo.png"/></a>&nbsp;&nbsp;&nbsp;
-    <a href="https://www.utbm.fr/"><img alt="utbm_logo.png" src="images/utbm_logo.png"/></a>&nbsp;&nbsp;&nbsp;
-    <a href="https://lcas.lincoln.ac.uk/wp/"><img alt="lcas_logo.png" src="images/lcas_logo.png"/></a>&nbsp;&nbsp;&nbsp;
-    <a href="https://www.nvidia.com/"><img alt="nvida_logo.png" src="images/nvidia_logo.png"/></a>
-
     <h2>Acknowledgment</h2>
     <p>The authors would like to thank <a href="http://www.multiagent.fr/People:Abbas-turki_abdeljalil">Abdeljalil Abbas-Turki</a>, <a href="http://www.multiagent.fr/People:Lamotte_olivier">Olivier Lamotte</a>, <a href="https://www.researchgate.net/profile/Jocelyn_Buisson">Jocelyn Buisson</a>, and <a href="https://www.researchgate.net/profile/Fahad_Lateef">Fahad Lateef</a> for their help in building the dataset, the <a href="https://lcas.lincoln.ac.uk/wp/">Lincoln Centre for Autonomous Systems (L-CAS)</a> for hosting the dataset, and the four reviewers of <a href="https://www.icra2020.org/">ICRA 2020</a> in helping improve the manuscript.</p>
-
+    
   </body>
 </html>
