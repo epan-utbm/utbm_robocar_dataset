@@ -5,6 +5,11 @@
 [![Build Status](https://travis-ci.org/epan-utbm/utbm_robocar_dataset.svg?branch=baselines)](https://travis-ci.org/epan-utbm/utbm_robocar_dataset)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
+## Issues
+
+* Radar data: (13)[https://github.com/epan-utbm/utbm_robocar_dataset/issues/13]
+* Vehicle position ground-truth provided by GPS-RTK: (1)[https://github.com/epan-utbm/utbm_robocar_dataset/issues/1], (7)[https://github.com/epan-utbm/utbm_robocar_dataset/issues/7]
+
 ## Dataset
 
 [https://epan-utbm.github.io/utbm_robocar_dataset/](https://epan-utbm.github.io/utbm_robocar_dataset/)
