@@ -9,6 +9,24 @@
   </head>
   
   <body>
+    <table width="100%" border="0">
+      <tr>
+        <td align="left">
+          <a href="#Description">Description</a>&nbsp;&nbsp;
+	  <a href="#Contributions">Contributions</a>&nbsp;&nbsp;
+          <a href="#Citation">Citation</a>&nbsp;&nbsp;
+          <a href="#Recording platform">Recording platform</a>&nbsp;&nbsp;
+          <a href="#Challenges">Challenges</a>&nbsp;&nbsp;
+          <a href="#Downloads">Downloads</a>&nbsp;&nbsp;
+          <a href="#How to play">How to play</a>&nbsp;&nbsp;
+          <a href="#Baselines">Baselines</a>&nbsp;&nbsp;
+          <a href="#Related work">Related work</a>&nbsp;&nbsp;
+          <a href="#Privacy">Privacy</a>
+        </td>
+      </tr>
+    </table>
+    <hr>
+	  
     <p style="text-align: left"><span style="color:#993300;"><b>&#128526; 2021-09-29: We have a new <a href="https://datasets.chronorobotics.tk/s/vVGheghiMYIF988">all-in-one download mirror</a> hosted by the <a href="https://chronorobotics.fel.cvut.cz/en">Chronorobotics Lab @ CTU</a>.</b></span></p>
     <p style="text-align: left"><span style="color:#993300;"><b>&#128521; 2021-01-04: Everything is back to normal.</b></span></p>
     <p style="text-align: left"><span style="color:#993300;"><b>&#128561; 2020-12-19: The data download links are broken due to some unknown cloud server issues, we will check it as soon as possible after our university reopens, and sorry for any inconvenience caused.</b></span></p>
@@ -25,7 +43,8 @@
       <img alt="itinerary_roundabout.png" height="240" src="images/itinerary_roundabout.png">
     </p>
     
-    <h2>Description</h2>
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <hr><h2 style="color:#A00;"><a name="Description">Description</a></h2>
     <p>This dataset was collected with our robocar (<b>in human driving mode of course</b>), equipped with eleven heterogeneous sensors, in the downtown (for long-term data) and suburban (for roundabout data) areas of <a href="http://www.montbeliard.fr/">Montb&eacute;liard</a> in France.
       The vehicle speed was limited to 50 km/h following the French traffic rules.
       For the long-term data, the driving distance is about 5.0 km (containing a small and a big road loop for loop-closure purpose) and the length of recorded data is about 16 minutes for each collection round.
@@ -37,7 +56,8 @@
       <iframe width="560" height="315" src="https://www.youtube.com/embed/_xAmXNVMQbM" frameborder="0" allowfullscreen></iframe>
     </div>
     
-    <h2>Contributions</h2>
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <hr><h2 style="color:#A00;"><a name="Contributions">Contributions</a></h2>
     <p>This dataset provides:</p>
     <ol>
       <li><a href="http://wiki.ros.org/">Robot Operating System (ROS)</a> <i>rosbag</i> files that record environmental data from two <a href="docs/HDL-32E datasheet.pdf">Velodyne HDL-32E lidars</a>, an <a href="docs/IbeoLUX2010.pdf">ibeo LUX 4L lidar</a>, a <a href="docs/dataSheet_LMS100-10000_1041113_en.pdf">SICK LMS100-10000 laser rangefinder</a>, a <a href="docs/140119_FS_ARS-308-21_EN_HS.pdf">Continental ARS 308 radar</a>, two stereo cameras <a href="docs/Bumblebee.pdf">(a Bumblebee XB3 and a Bumblebee2)</a>, two <a href="docs/Datasheet_741&742.pdf">Pixelink PL-B742F cameras</a> with <a href="docs/fe185c086ha-1.pdf">Fujinon FE185C086HA-1 fisheye lens</a>, a <a href="docs/ProFlex500_RM_D_en.pdf">Magellan ProFlex 500 GNSS receiver</a> with an RTK base station, and an <a href="docs/MTi-28A53G25.pdf">Xsens MTi-28A53G25 IMU</a>;
@@ -46,7 +66,8 @@
       <li>Baseline methods especially for the lidar odometry, with ground-truth trajectory recorded by GPS-RTK.
     </ol>
     
-    <h2>Citation</h2>
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <hr><h2 style="color:#A00;"><a name="Citation">Citation</a></h2>
     <p>If you publish work based on, or using, this dataset, we would appreciate citations to the following:</p>
     <em>
       @inproceedings{eu_longterm_dataset,<br>
@@ -57,7 +78,8 @@
       }
     </em>
     
-    <h2>Recording platform</h2>
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <hr><h2 style="color:#A00;"><a name="Recording platform">Recording platform</a></h2>
     <p style="text-align: left">
       <img alt="sensors.png" height="315" src="images/sensors.png">&nbsp;&nbsp;&nbsp;
       <img alt="sensors.png" height="315" src="images/ros_graph.jpg">
@@ -76,7 +98,8 @@
     </ul>
     <p>For more details, please refer to our paper.</p>
     
-    <h2>Challenges</h2>
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <hr><h2 style="color:#A00;"><a name="Challenges">Challenges</a></h2>
     <p>Many new research challenges have been introduced in this dataset, such as:</p>
     <table style="border-spacing: 20px; text-align: center;">
       <tr>
@@ -110,7 +133,8 @@
     </table>
     <sup>*</sup><i>Aggressive driving / rule breaking behavior</i>
     
-    <h2>Downloads</h2>
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <hr><h2 style="color:#A00;"><a name="Downloads">Downloads</a></h2>    
     <p>
       <i>Please note that all rosbags are <a href="http://wiki.ros.org/rosbag/Commandline#rosbag_compress">compressed</a>, please <a href="http://wiki.ros.org/rosbag/Commandline#rosbag_decompress">decompress</a> them as needed.</i>
       <br />
@@ -146,7 +170,8 @@
     
     <!-- <p><i>Please note that, 1) it is a growing dataset and will be incrementally published, and 2) images will be incrementally available after processing to meet the GDPR requirements.</i></p> -->
     
-    <h2>How to play</h2>
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <hr><h2 style="color:#A00;"><a name="How to play">How to play</a></h2>
     <table>
       <tr><td bgcolor="#DCDCDC">roslaunch <a href="https://github.com/epan-utbm/utbm_robocar_dataset/tree/baselines/launch">utbm_dataset_play.launch</a> bag:=path_to_your_rosbag</td></tr>
     </table>
@@ -157,24 +182,27 @@
       <li> A complete and aligned tf tree.
     </ol>
     
-    <h2>Baselines</h2>
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <hr><h2 style="color:#A00;"><a name="Baselines">Baselines</a></h2>
     <p><a href="https://github.com/epan-utbm/utbm_robocar_dataset">https://github.com/epan-utbm/utbm_robocar_dataset</a></p>
 
-    <h2>Related Work</h2>
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <hr><h2 style="color:#A00;"><a name="Related work">Related work</a></h2>
     <ol>
       <li>Tao Yang, Xiaofei Chang, Hang Su, Nathan Crombez, Yassine Ruichek, Tomas Krajnik, and Zhi Yan. <b>Raindrop removal with light field image using image inpainting</b>. <i>IEEE Access</i>, March 2020. [<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9040628">PDF</a> | <a href="https://github.com/cavayangtao/light-field-raindrop-dataset">Dataset</a>]
       <li>Hongkun Zheng. <b>Image data anonymization</b>. <i>CIAD Internship Report</i>, February 2020. [<a href="https://raw.githubusercontent.com/epan-utbm/image_anonymization/master/Report.pdf">PDF</a> | <a href="https://github.com/epan-utbm/image_anonymization">Code</a>]
       <li>Li Sun, Zhi Yan, Anestis Zaganidis, Cheng Zhao, and Tom Duckett. <b>Recurrent-OctoMap: Learning state-based map refinement for long-term semantic mapping with 3-D-lidar data</b>. <i>IEEE Robotics and Automation Letters</i>, July 2018. [<a href="publications/yz_bib.html#ls18ral">BibTeX</a> | <a href="https://doi.org/10.1109/LRA.2018.2856268">PDF</a> | <a href="https://youtu.be/f8r1DO5kU6g">Video</a>]
     </ol>
 
-    <h2>Privacy</h2>
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <hr><h2 style="color:#A00;"><a name="Privacy">Privacy</a></h2>
     <p>We take privacy very seriously and handle personal data in line with the <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">General Data Protection Regulation (GDPR) (EU) 2016/679</a>. To this end, we used <a href="https://github.com/epan-utbm/image_anonymization">deep learning-based methods</a> to post-process the images in order to blur face and license plate information. However, if you still find yourself or your personal belongings in the data, please contact us and we will immediately remove the corresponding information from the dataset.</p>
 
     <h2>License</h2>
     <p>
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
       <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-      <br />Copyright (c) 2018-2020 <a href="https://yzrobot.github.io/">Zhi Yan</a>, <a href="https://sites.google.com/site/lisunspersonalsite/">Li Sun</a>, <a href="http://labe.felk.cvut.cz/~tkrajnik/">Tomas Krajnik</a>, and <a href="https://www.researchgate.net/profile/Yassine_Ruichek">Yassine Ruichek</a>.
+      <br />Copyright (c) 2018-2022 <a href="https://yzrobot.github.io/">Zhi Yan</a>, <a href="https://sites.google.com/site/lisunspersonalsite/">Li Sun</a>, <a href="http://labe.felk.cvut.cz/~tkrajnik/">Tomas Krajnik</a>, and <a href="https://www.researchgate.net/profile/Yassine_Ruichek">Yassine Ruichek</a>.
     </p>
     
     <h2>Funding</h2>
